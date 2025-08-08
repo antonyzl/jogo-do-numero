@@ -17,5 +17,8 @@ function verificarPalpite() {
 
 is (palpiteUsuario === numeroAleatorio){
     ultimoResultado.textContent = "Parabens! Voce acertou!";
+    ultimoResultado.style.backgroundColor = "green";
+    baixoOuAlto.textContent = "";
+    finalizarJogo();
 }
 }
