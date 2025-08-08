@@ -33,6 +33,7 @@ align-items: center;
 .formulario input [type="number"] {
     width: 200px;
     padding: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #cccccc;
     font-size: 1.1em;
@@ -47,4 +48,31 @@ align-items: center;
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+
+.formulario input[type="submit"]: hover{
+    background-color: #218838;
+}
+
+paragrafosResultado p {
+    font-size: 1.2em;
+    text-align:center;
+    margin: 10px 0;
+}
+
+.ultimoResultado {
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    text-align:center;
+}
+
+.ultimoResultado.errado {
+    background-color:#dc3545;
+}
+
+.ultimoResultado.correto {
+    background-color: #28a745;
 }
