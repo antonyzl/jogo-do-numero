@@ -1,4 +1,4 @@
-let numeroAleatorio = Math.floor(Math.random() *100) = 1; 
+let numeroAleatorio = Math.floor(Math.random() *100) + 1; 
 const palpites = document.querySelector('.palpites');
 const ultimoResultado = document.querySelector('.ultimoResultado');
 const baixoOuAlto = document.querySelector('.baixoOuAlto');
@@ -9,7 +9,7 @@ let botaoReiniciar;
 
 function verificarPalpite() {
     const palpiteUsuario = Number (campoPalpite.value);
-    if (contagemPalpites === 1); {
+    if (contagemPalpites === 1) {
     palpites.textContent = "Palpites anteriores: ";
     }
 
@@ -28,9 +28,9 @@ if (palpiteUsuario === numeroAleatorio){
     ultimoResultado.textContent = "Errado";
     ultimoResultado.style.backgroundColor = "red";
     if (palpiteUsuario < numeroAleatorio) {
-        baixoOuAlto.textcontent = "O ultimo palpite foi muito baixo";
+        baixoOuAlto.textContent = "O ultimo palpite foi muito baixo";
     } else if (palpiteUsuario > numeroAleatorio) {
-        baxoOuAlto.textContent = "O ultimo palpite foi muito alto"; 
+        baixoOuAlto.textContent = "O ultimo palpite foi muito alto"; 
  }
 }
     
@@ -44,8 +44,8 @@ envioPalpite.addEventListener('click', verificarPalpite)
 function finalizarJogo() {
   campoPalpite.disabled = true;
     envioPalpite.disabled = true;
-    botaoReiniciar = document.creatElement('button')
-    document.body.appenChild(botaoReiniciar);
+    botaoReiniciar = document.createElement('button')
+    document.body.appendChild(botaoReiniciar);
     botaoReiniciar.textContent = 'Reiniciar Jogo';
     botaoReiniciar.classList.add('botaoReiniciar');
     document.body.appenChild(botaoReiniciar);
@@ -54,7 +54,7 @@ function finalizarJogo() {
 
 function reiniciarJogo () {
     contagemPalpites = 1;
-    const paragrafosReiniciar=document.querySelectorAll('.paragrafosResultado p');
+    const paragrafosReiniciar=document.querySelectorAll('.paragrafosResultados p');
     for (const paragrafoReiniciar of paragrafosReiniciar) {
         paragrafoReiniciar.textContent = "";
 }
